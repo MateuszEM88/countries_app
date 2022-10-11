@@ -142,7 +142,7 @@ const createBorderCountriesContainer = (country) => {
 
   country.borders.forEach((border) => {
     borderCountriesContainerElement.appendChild(
-      createDetailButton(border, `/?country=${border}`)
+      createDetailButton(border, `/countries_app/?country=${border}`)
     );
   });
 
@@ -158,6 +158,6 @@ export const renderCountriesList = (countries) => {
 export const renderCountryDetails = (country) => {
   const rootElement = document.querySelector("#root");
   rootElement.innerHTML = "";
-  rootElement.appendChild(createDetailButton("Go back", "/countries_app"));
+  rootElement.appendChild(createDetailButton("Go back", "/countries_app/"));
   rootElement.appendChild(createDetailElement(country));
 };
